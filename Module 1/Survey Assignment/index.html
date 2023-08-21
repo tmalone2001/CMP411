@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header-container">
+        <h1>New Roommate Form</h1>
+        <h5>
+            <i>Thank you for taking time to fill this out!</i>
+        </h5>
+    </div>
+    <div class="form">
+        <div class="mb-3">
+            <label for class="form-label">Name</label>
+            <input class="form-control" id="name" placeholder="Enter Name Here">
+
+            <label for class="form-label">Phone Number</label>
+            <input class="form-control" id="name" placeholder="Enter Phone Number Here">
+        </div>
+        <div class="dropdown">
+            <label for class="form-label">Age</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Choose...</option>
+                <option value="1">17</option>
+                <option value="2">18</option>
+                <option value="3">19</option>
+                <option value="4">20</option>
+                <option value="5">21</option>
+                <option value="6">22</option>
+            </select>
+        </div>
+        <div class="checkboxes">
+            <label for class="form-label">Preffered Chores</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Vacuum
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Dishes
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Cleaning
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Groceries
+                </label>
+              </div>
+        </div>
+        <div class="textarea">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Any Other Comments?</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Text Here" rows="3"></textarea>
+              </div>
+        </div>
+    </div>
+</body>
+</html>
