@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="hello">
+        <h1>Hello!</h1>
+    </div>
+    <div class="promptButton">
+        <p>What is your name?
+            <input type="text" id="name">
+        </p>
+        <button onclick="getName()">Press Me!</button>
+    </div>
+    <div class="answer">
+        <strong>
+            <p id="nameDisplay"></p>
+        </strong>
+    </div>
 </body>
+
+<script type="text/javascript">
+    function getName() {
+        var name = document.getElementById("name").value;
+        document.getElementById("nameDisplay").innerHTML = "Hello, " + name + "!";
+    }
+</script>
+
 </html>

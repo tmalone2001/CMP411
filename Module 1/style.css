@@ -1,0 +1,14 @@
+body {
+    background-color: lightblue;
+}
+
+.hello {
+    color: red;
+    font-size: 1em;
+}
+
+.answer {
+    color: blue;
+    padding-left: 15px;
+    font-size: 1.5em;
+}
