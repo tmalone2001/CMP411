@@ -18,14 +18,14 @@
     <div class="form">
         <div class="mb-3">
             <label for class="form-label">Name</label>
-            <input class="form-control" id="name" placeholder="Enter Name Here">
+            <input type="text" class="form-control" id="name" placeholder="Enter Name Here" required/>
 
             <label for class="form-label">Phone Number</label>
-            <input class="form-control" id="name" placeholder="Enter Phone Number Here">
+            <input class="form-control" id="phone" placeholder="Enter Phone Number Here" required>
         </div>
         <div class="dropdown">
-            <label for class="form-label">Age</label>
-            <select class="form-select" aria-label="Default select example">
+            <label for class="form-label" id="age">Age</label>
+            <select class="form-select" aria-label="Default select example" required>
                 <option selected>Choose...</option>
                 <option value="1">17</option>
                 <option value="2">18</option>
@@ -68,6 +68,41 @@
                 <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Text Here" rows="3"></textarea>
               </div>
         </div>
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary" type="button" onclick="Validation()">Submit</button>
+        </div>
     </div>
 </body>
+
+<script>
+  function Validation(){
+    //assign variables to required input fields
+    var name = document.getElementById("name");
+    var phone = document.getElementById("phone");
+    var age = document.getElementById("age");
+
+    //logic - If required input fields are valid, display success message.
+    //logic - If required input fields are not valid, set input boxes border color to red and display error messages accordingly
+    if(name.value.length == 0){
+      name.style.borderColor = "red";
+      document.getElementById("name").innerHTML = "Name is required";
+      name.placeholder = "Please enter your name";
+    } else{
+      name.style.borderColor = "";
+    }
+
+    if(phone.value.length == 0){
+      phone.style.borderColor = "red";
+      document.getElementById("phone").innerHTML = "Phone Number is required";
+      phone.placeholder = "Please enter your phone number";
+    } else{
+      phone.style.borderColor = "";
+    }
+
+    if(phone.value.length > 0 && name.value.length > 0){
+      alert("Thanks, " + name.value + ". The form was submitted!")
+    }
+  }
+</script>
+
 </html>
