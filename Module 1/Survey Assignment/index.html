@@ -16,92 +16,101 @@
         </h5>
     </div>
     <div class="form">
-        <div class="mb-3">
-            <label for class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Enter Name Here" required/>
 
-            <label for class="form-label">Phone Number</label>
-            <input class="form-control" id="phone" placeholder="Enter Phone Number Here" required>
-        </div>
-        <div class="dropdown">
-            <label for class="form-label" id="age">Age</label>
-            <select class="form-select" aria-label="Default select example" required>
-                <option selected>Choose...</option>
-                <option value="1">17</option>
-                <option value="2">18</option>
-                <option value="3">19</option>
-                <option value="4">20</option>
-                <option value="5">21</option>
-                <option value="6">22</option>
-            </select>
-        </div>
-        <div class="checkboxes">
-            <label for class="form-label">Preffered Chores</label>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Vacuum
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Dishes
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Cleaning
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Groceries
-                </label>
-              </div>
-        </div>
-        <div class="textarea">
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Any Other Comments?</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Enter Text Here" rows="3"></textarea>
-              </div>
-        </div>
-        <div class="d-grid gap-2">
-          <button class="btn btn-primary" type="button" onclick="Validation()">Submit</button>
-        </div>
+	    <div id="error" class="error" style="display:none"></div>
+
+      <strong><label for="name">Name</label></strong>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <strong><label for="email">Email</label></strong>
+      <input type="text" id="email" name="email" placeholder="Your email" required>
+
+      <strong><label for="age">Age</label></strong>
+      <select id="age" name="age" required>
+        <option value="">Choose An Age</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+      </select>
+
+      <strong><label for="chore">Preffered Chore</label></strong><br>
+      <input type="checkbox" id="clean" name="clean" value="clean">
+      <label for="clean">Clean</label><br>
+
+      <input type="checkbox" id="sweep" name="sweep" value="sweep">
+      <label for="sweep">Sweep</label><br>
+
+      <input type="checkbox" id="groceries" name="groceries" value="groceries">
+      <label for="groceries">Groceries</label><br>
+
+      <strong><label for="textarea">Any Comments?</label></strong>
+      <textarea></textarea>
+
+      <input type="submit" value="Submit" onclick="Validation()">
     </div>
 </body>
 
 <script>
+
+  function isEmail(emailAdress){
+      let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (emailAdress.match(regex)) 
+      return true; 
+
+    else 
+      return false; 
+  }
+
   function Validation(){
     //assign variables to required input fields
     var name = document.getElementById("name");
-    var phone = document.getElementById("phone");
+    var email = document.getElementById("email");
     var age = document.getElementById("age");
+    var errorMessage = ""
+    document.getElementById("error").innerHTML = "";
 
     //logic - If required input fields are valid, display success message.
     //logic - If required input fields are not valid, set input boxes border color to red and display error messages accordingly
     if(name.value.length == 0){
       name.style.borderColor = "red";
-      document.getElementById("name").innerHTML = "Name is required";
-      name.placeholder = "Please enter your name";
+      errorMessage += "Name is required";
+      document.getElementById("error").innerHTML = "Name is required. ";
+      document.getElementById("error").style.display = "block";
     } else{
       name.style.borderColor = "";
     }
 
-    if(phone.value.length == 0){
-      phone.style.borderColor = "red";
-      document.getElementById("phone").innerHTML = "Phone Number is required";
-      phone.placeholder = "Please enter your phone number";
+    if(email.value.length == 0){
+      email.style.borderColor = "red";
+      errorMessage += "Email is required";
+      document.getElementById("error").innerHTML += "Email is required. ";
+      document.getElementById("error").style.display = "block";
+    } else if(isEmail(document.getElementById("email").value) == false){
+      email.style.borderColor = "red";
+      errorMessage += "Email is required";
+      document.getElementById("error").innerHTML += "Email is invalid. ";
+      document.getElementById("error").style.display = "block";
     } else{
-      phone.style.borderColor = "";
+      email.style.borderColor = "";
     }
 
-    if(phone.value.length > 0 && name.value.length > 0){
-      alert("Thanks, " + name.value + ". The form was submitted!")
+    if(age.value == ""){
+      age.style.borderColor = "red";
+      errorMessage += "Age is required";
+      document.getElementById("error").innerHTML += "Age is required. ";
+      document.getElementById("error").style.display = "block";
+    }else{
+      age.style.borderColor = "";
     }
+
+    if(errorMessage.length < 1){
+      document.getElementById("error").style.display = "none";
+      alert("Thanks, " + document.getElementById("name").value + "! Your input has been submitted!");
+    }
+
   }
 </script>
 
