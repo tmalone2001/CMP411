@@ -20,36 +20,36 @@ input[type=text], select {
     box-sizing: border-box;
   }
 
-  input[type=submit] {
-    background-color: #04AA6D;
-    border-radius: 15px;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+input[type=submit] {
+background-color: #04AA6D;
+border-radius: 15px;
+border: none;
+color: white;
+padding: 16px 32px;
+text-decoration: none;
+margin: 4px 2px;
+cursor: pointer;
+}
 
-  textarea {
-    width: 100%;
-    height: 150px;
-    padding: 12px 20px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    resize: none;
-  }
+textarea {
+width: 100%;
+height: 150px;
+padding: 12px 20px;
+box-sizing: border-box;
+border: 2px solid #ccc;
+border-radius: 4px;
+background-color: white;
+resize: none;
+}
 
-  .error {
-    border: 1px solid;
-    margin: 10px 0px;
-    padding: 15px 10px 15px 50px;
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    color: #D8000C;
-    background-color: #FFBABA;
-    background-image: url('https://i.imgur.com/GnyDvKN.png');
-  }
+.error {
+border: 1px solid;
+margin: 10px 0px;
+padding: 15px 10px 15px 50px;
+background-repeat: no-repeat;
+background-position: 10px center;
+color: #D8000C;
+background-color: #FFBABA;
+background-image: url('https://i.imgur.com/GnyDvKN.png');
+}
 
