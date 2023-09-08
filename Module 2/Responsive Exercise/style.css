@@ -1,0 +1,24 @@
+.flexboxrow{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.flexboxcol{
+    width: 25%
+}
+
+@media screen and (max-width: 992px) {
+    .flexboxcol{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .flexboxcol{
+        width: 100%;
+    }
+}
+
+
