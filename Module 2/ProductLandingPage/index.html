@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="navbar" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+    <div class="contentarea" id="news">
+        <div class="flexboxrow">
+            <div class="flexboxcol" style="background-color: red;">
+                <h1>Husker News</h1>
+                <h2>Huskers are currently 0-2 on the season! Here are some updates on the best and worst players!</h2>
+            </div>
+            <div class="flexboxcol" style="background-color: gray;">
+                <h1>Best Player</h1>
+                <h2>Cameron Lendhardt</h2>
+                <img src="/Module 2/Images/cameronlendhardt.jpg" id="cam" style="height: 200px; width: 350px; margin-left: 40px;" alt="Image of Cameron Lendhardt">
+                <ul>
+                    <li>2 QB Sacks</li>
+                    <li>6 Solo Tackles</li>
+                </ul>
+            </div>
+            <div class="flexboxcol" style="background-color: red;">
+                <h1>Worst Player</h1>
+                <h2>Jeff Simms</h2>
+                <img src="/Module 2/Images/jeffsimms.avif" id="jeff" style="height: 200px; width: 350px; margin-left: 40px;" alt="Image of Jeff Simms">
+                <ul>
+                    <li>6 Season Turnovers</li>
+                    <li>No Passing Touchdowns</li>
+                </ul>
+            </div>
+            <div class="flexboxcol" style="background-color: gray;">
+                <h1>Next Weeks Game</h1>
+                <h2>Next Week, the Huskers will play Northern Illinois at home. The predictions for this game is that the huskers should win by 11.</h2>
+                <iframe width="200" height="200" src="https://www.youtube.com/watch?v=r64yDU1LpQo&t=2s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="flexboxrow" id="contact" style="padding-top: 300px; background-color: black;">
+        <div class="flexboxcol">
+            <p style="color: white;"><strong>Contact</strong></p>
+            <p style="color: white;">Find us</p>
+        </div>
+        <br>
+        <div class="flexboxcol">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d834136.8275254654!2d24.252702365401582!3d35.24762259455032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x149afe2f827d98a1%3A0x100bd2ce2b9c630!2sCrete%2C%20Greece!5e0!3m2!1sen!2sus!4v1694621210308!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "navbar") {
+            x.className += " responsive";
+          } else {
+            x.className = "navbar";
+          }
+        }
+    </script>
+
+</body>
+</html>
