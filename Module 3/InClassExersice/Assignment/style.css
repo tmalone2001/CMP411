@@ -1,0 +1,16 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+.col{
+    width: 33%;
+}
+
+@media screen and (max-width: 767px){
+    .col{
+        width: 100%;
+    }
+}

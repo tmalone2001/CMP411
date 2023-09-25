@@ -1,0 +1,14 @@
+.row{
+    display: flex;
+    flex: wrap;
+}
+
+.col{
+    width: 25%;
+}
+
+@media screen and (max-width: 992px) {
+    .col{
+        width: 50%;
+    }
+}
