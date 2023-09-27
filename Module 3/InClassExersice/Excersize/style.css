@@ -1,14 +1,16 @@
 .row{
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: space-between;
 }
 
 .col{
-    width: 25%;
+    width: 33%;
 }
 
 @media screen and (max-width: 992px) {
     .col{
-        width: 50%;
+        width: 100%;
     }
 }

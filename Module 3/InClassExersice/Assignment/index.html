@@ -5,80 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <h1>Palindrome Checker</h1>
+    <button onclick="ClearTable()">Clear Tables</button>
     <div class="row">
         <div class="col" id="inputArea">
             <h2>Form to obtain a word and check if it is a palindrome</h2>
             <p>Word to check: <input type="text" id="word"></p>
-            <p>Algorithm to use: (1 or 2)<input type="text" id="algorithm"></p>
+            <p>Algorithm to use: (1,2,3,4)<input type="text" id="algorithm"></p>
             <button onclick="AddToList()">Check and add to list</button>
         </div>
         <div class="col" id="alg1">
-            <h2>Algorithm 1: Split, Reverse, Index</h2>
+            <h2>Algorithm 1: Compare Two Lists</h2>
             <h3>(word: palindrome?)</h3>
             <table id="table1"></table>
         </div>
         <div class="col" id="alg2">
-            <h2>Algorithm 2</h2>
+            <h2>Algorithm 2: Reverse Method</h2>
             <h3>(word: palindrome?)</h3>
             <table id="table2"></table>
         </div>
+        <div class="col" id="alg3">
+            <h2>Algorithm 3: Index First and Last</h2>
+            <h3>(word: palindrome?)</h3>
+            <table id="table3"></table>
+        </div>
+        <div class="col" id="alg4">
+            <h2>Algorithm 4: Compare First Half to Second Half</h2>
+            <h3>(word: palindrome?)</h3>
+            <table id="table4"></table>
+        </div>
     </div>
 </body>
-
-<script>
-    function AddToList(){
-        var table1 = document.getElementById("table1");
-        var table2 = document.getElementById("table2");
-        var word = document.getElementById("word").value;
-        var algo = parseInt(document.getElementById("algorithm").value);
-        if (algo == "1"){
-            var row = table1.insertRow(-1);
-            var cell1 = row.insertCell(0);
-            if (Algorithm1(word) == true){
-                cell1.innerHTML = word + ":" + " is a palindrome";
-            } else {
-                cell1.innerHTML = word + ":" + " is not a palindrome";
-            }
-            }
-
-        if (algo == "2"){
-            var row2 = table2.insertRow(-1);
-            var cell2 = row2.insertCell(0);
-            cell2.innerHTML = word;
-            }
-    }
-
-    function Algorithm1(str){
-        var lowerStr = str.toLowerCase();
-        var word1 = lowerStr;
-        var word2 = lowerStr.split('').reverse().join('');
-        var counter = 0;
-        for (var i = 0; i < word1.length; i++) {
-            for (var j = 0; j < word2.length; j++){
-                if (i != j) {
-                    counter++;
-                }
-            }
-        }
-        if (counter != 0) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    function Algorithm2(str){
-        var lowerStr = str.toLowerCase();
-        var reverseStr = lowerStr.split('').reverse().join('');
-        if(lowerStr == reverseStr){
-            return true;
-        } else {
-            return false;
-        }
-    }
-</script>
-
 </html>
