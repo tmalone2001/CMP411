@@ -120,7 +120,7 @@ function Algorithm3(str){
     var lowerStr = str.toLowerCase();
     var len = str.length;
     for (var i = 0; i < len/2; i++) {
-        if (str[i] !== str[len - 1 - i]) {
+        if (lowerStr[i] !== lowerStr[len - 1 - i]) {
             return false;
         } else {
             return true;
