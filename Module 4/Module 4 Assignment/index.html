@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <h1>Web Service API Consumer Example</h1>
+    <div class="row">
+        <div class="col">
+            <h1>Obtain user info</h1>
+            <p>All meat or meat with filler? <select id="ddmeat">
+                <option value="all-meat">All meat</option>
+                <option value="meat-and-filler">Meat w Filler</option>
+            </select></p>
+            <p>How many paragraphs <select id="dd">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select></p>
+            <button onclick="getData()">Get Data!</button>
+        </div>
+        <div class="col">
+            <h1>Returned data in raw JSON</h1>
+            <p id="raw"></p>
+        </div>
+        <div class="col">
+            <h1>Returned data as formatted paragraphs</h1>
+            <p id="formatted"></p>
+        </div>
+        <div class="col">
+            <h1>Return Encrypted Data</h1>
+            <p id="encrypted"></p>
+        </div>
+        <div class="col">
+            <h1>Return Subsituted Data</h1>
+            <p id="substituted"></p>
+        </div>
+    </div>
+</body>
+</html>
