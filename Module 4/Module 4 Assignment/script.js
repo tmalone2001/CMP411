@@ -1,5 +1,7 @@
 function getData() {
     var dd = document.getElementById("dd");
+    var algo = document.getElementById("algodd");
+    var selectedAlgo = algo.value;
     var selectedMeat = document.getElementById("meatdd");
     var selectedParas = dd.value;
     var apiURL = "https://baconipsum.com/api/?type=" + selectedMeat + "&paras=" + selectedParas;
@@ -18,9 +20,16 @@ function getData() {
                 paraOutput.innerHTML += "<p>" + data[para] + '/<p>';
             }
 
-            encOutput.innerHTML = ceasarCipher(paraOutput.innerHTML, 3);
-
-            subOutput.innerHTML = encryptWithSubstitution(paraOutput.innerHTML)
+            if(selectedAlgo == "ceasar"){
+                encOutput.innerHTML = ceasarCipher(paraOutput.innerHTML, 3);
+                subOutput.innerHTML = "";
+            }
+            
+            if(selectedAlgo == "substitution"){
+                subOutput.innerHTML = encryptWithSubstitution(paraOutput.innerHTML);
+                encOutput.innerHTML = "";
+            }
+            
 
 
         })
@@ -75,7 +84,6 @@ const substitutionKey = {
     'z': 'w'
   };
   
-  // Function to encrypt a message using the substitution cipher
   function encryptWithSubstitution(text) {
     const encryptedText = text.split('').map(char => substitutionKey[char] || char).join('');
     return encryptedText;
