@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music API</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Customers</h1>
+
+  <br>
+  <br>
+ 
+  <div id="table-wrapper">
+    <table id="data-table">
+      <tr>
+        <th>ID</th>
+        <th>Song Name</th>
+        <th>Artist Name</th>
+        <th>Rating</th>
+      </tr>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <br><br>
+
+  <div>
+    <button type="button" class="buttons" onclick="location.href='addMusic.html'" title="Add new row from the text inputs">Add</button>
+    <button type="button" class="buttons" onclick="" title="Update selected row">Update</button>
+    <button type="button" class="buttons" onclick="" title="Delete selected row">Delete</button>
+    <button type="button" class="buttons" onclick="loadTable()">Reload Table</button>
+    <span style="margin-left: 10px;"></span>
+  </div>
+</body>
+
+<script>
+    window.onload = loadTable();
+</script>
+
+</html>

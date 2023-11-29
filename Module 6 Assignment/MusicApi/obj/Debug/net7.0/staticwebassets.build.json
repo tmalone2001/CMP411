@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "rJASg78Pi54fXf4cF7b6uGuNVkjAmqXQizAJm7a2zkQ=",
+  "Source": "MusicApi",
+  "BasePath": "_content/MusicApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MusicApi\\wwwroot",
+      "Source": "MusicApi",
+      "ContentRoot": "C:\\Users\\trevo\\OneDrive\\Desktop\\CMP411\\Module 6 Assignment\\MusicApi\\wwwroot\\",
+      "BasePath": "_content/MusicApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\trevo\\OneDrive\\Desktop\\CMP411\\Module 6 Assignment\\MusicApi\\wwwroot\\index.html",
+      "SourceId": "MusicApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\trevo\\OneDrive\\Desktop\\CMP411\\Module 6 Assignment\\MusicApi\\wwwroot\\",
+      "BasePath": "_content/MusicApi",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\trevo\\OneDrive\\Desktop\\CMP411\\Module 6 Assignment\\MusicApi\\wwwroot\\script.js",
+      "SourceId": "MusicApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\trevo\\OneDrive\\Desktop\\CMP411\\Module 6 Assignment\\MusicApi\\wwwroot\\",
+      "BasePath": "_content/MusicApi",
+      "RelativePath": "script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script.js"
+    },
+    {
+      "Identity": "C:\\Users\\trevo\\OneDrive\\Desktop\\CMP411\\Module 6 Assignment\\MusicApi\\wwwroot\\style.css",
+      "SourceId": "MusicApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\trevo\\OneDrive\\Desktop\\CMP411\\Module 6 Assignment\\MusicApi\\wwwroot\\",
+      "BasePath": "_content/MusicApi",
+      "RelativePath": "style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\style.css"
+    }
+  ]
+}
